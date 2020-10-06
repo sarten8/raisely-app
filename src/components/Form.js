@@ -64,9 +64,9 @@ const Button = styled.button`
   }
 `
 
-const Form = () => {
+const Form = ({ submitForm }) => {
 
-  const { handleChange, values, handleSubmit, errors } = useForm(validate)
+  const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate)
 
   return (
     <Container>
