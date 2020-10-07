@@ -35,8 +35,10 @@ const SubTitle = styled.h2`
 
 function App() {
   const [ isSubmitted, setIsSubmitted ] = useState(false)
+  const [ message, setMessage ] = useState('')
 
-  const submitForm = () => {
+  const submitForm = mess => {
+    setMessage(mess)
     setIsSubmitted(true)
   }
 
@@ -44,7 +46,7 @@ function App() {
     <Container>
       <Content>
         <Title>APP</Title>
-        {!isSubmitted ? <Form submitForm={submitForm} /> : <SubTitle>Congrats!</SubTitle>}
+        {!isSubmitted ? <Form submitForm={submitForm} /> : <SubTitle>{message}</SubTitle>}
       </Content>
     </Container>
   )

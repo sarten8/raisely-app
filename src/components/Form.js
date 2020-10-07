@@ -108,6 +108,7 @@ const Form = ({ submitForm }) => {
           type="password"
           placeholder="Password"
           name="password"
+          autoComplete="true"
           value={values.password}
           onChange={handleChange}
           error={errors.password} />

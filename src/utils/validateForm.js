@@ -1,6 +1,7 @@
 import validator from 'validator'
 
 const validateForm = values => {
+
   let errors = {}
   
   if(!values.firstName.trim()) {
@@ -14,7 +15,7 @@ const validateForm = values => {
   if(!values.email.trim()) {
     errors.email = "Enter your email."
   } else if (!validator.isEmail(values.email)) {
-    errors.email = "Please enter a valid email."
+      errors.email = "Please enter a valid email."
   }
 
   if(!values.password.trim()) {
